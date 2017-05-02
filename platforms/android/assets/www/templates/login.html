@@ -1,0 +1,95 @@
+<ion-modal-view>
+
+  <ion-content class="login_content" scroll="false" on-swipe-right="onSwipeRight()" on-swipe-left="onSwipeLeft()">
+    <div class="custom_header">
+      <button class="button button-clear button-icon closeBtn"  ng-click="closeLogin()"><i class="icon ion-ios-close-empty"></i></button>
+      <img class="logo" src="img/Logo.png" />
+      <div class="button_rows">
+        <div class="row">
+          <div class="col-50" ng-class="isTab=='signup'?'active':''">
+            <button class="button button-clear button-light" ng-click="changeTab('signup')">SIGN UP</button>
+          </div>
+          <div class="col-50" ng-class="isTab=='signin'?'active':''">
+            <button class="button button-clear button-light"  ng-click="changeTab('signin')">SIGN IN</button>
+          </div>
+        </div>
+        <div class="row arrow_row">
+          <div class="col-50" >
+            <div class="arrow" ng-show="isTab=='signup'"></div>
+          </div>
+          <div class="col-50">
+            <div class="arrow" ng-show="isTab!=='signup'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="list signup_list" ng-if="isTab=='signup'">
+        <div class="row no-padding">
+          <div class="col-50">
+            <label class="item item-input">
+              <input type="text" placeholder="First" ng-model="newuser.firstName">
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="Last" ng-model="newuser.lastName">
+            </label>
+          </div>
+          <div class="col-50" >
+            <img class="img_btn" ng-src="img/Profile.png" ng-if="newuser.profileImage==''" ng-click="showCameraSheet()"/>
+            <img class="img_btn" ng-src="{{newuser.profileImage}}" ng-if="newuser.profileImage!=''" ng-click="showCameraSheet()"/>
+          </div>
+        </div>
+        <label class="item item-input">
+          <input type="email" placeholder="E-mail"  ng-model="newuser.email">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Password"  ng-model="newuser.password">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Confirm Password"  ng-model="newuser.confirm">
+        </label>
+
+        <div class="row no-padding">
+          <div class="col-50">
+            <label class="item item-input" style="padding-left:30px; height:48px;">
+              <input type="date" placeholder="Birthday" ng-model="newuser.dob" style=" line-height:50px; padding-top:0px;">
+            </label>
+          </div>
+          <div class="col-50">
+
+            <label class="item item-input item-select">
+              <select ng-model="newuser.gender">
+                <option selected>Male</option>
+                <option>Female</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <br>
+        <div class="row no-padding">
+          <div class="col-50">
+            <button class="button button-outline button-light signup_btn" ng-click="signup()">Create Account</button>
+          </div>
+          <div class="col-50">
+            <button class="button button-positive icon-right ion-social-facebook fb_btn" ng-click="fbLogin()">Sign Up With</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="list signin_list" ng-if="isTab!=='signup'">
+      <label class="item item-input">
+        <input type="email" placeholder="E-mail or Username" ng-model="user.username">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="user.password">
+      </label>
+      <button class="button button-outline button-light sign_btn" ng-click="login()" style="margin-top:50px;">Sign In</button>
+      <button class="button button-positive fb_btn" ng-click="fbLogin()">Sign In With Facebook</button>
+      <div class="row padding">
+        <div class="col-50" style="text-align:left;"><button class="button button-light button-clear" ng-click="goGuest()">Continue As Guest</button></div>
+        <div class="col-50" style="text-align:right;"><button class="button button-light button-clear" ng-click="onForgotPassword()">Forgot Password?</button></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

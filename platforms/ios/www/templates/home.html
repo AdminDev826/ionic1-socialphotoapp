@@ -1,0 +1,15 @@
+<ion-view >
+  <ion-content lazy-scroll style="padding-left:5px; padding-right:5px; padding-top:5px;">
+    <div class="list ">
+      <ion-slide-box auto-play="true" does-continue="true" class="home_slider" style="margin-bottom:4px;">
+        <ion-slide ng-repeat="slider in eventSliderList">
+          <div class="box " style="background-image:url('{{slider.imageFeatureURL}}')" ng-click="goSliderDetail(slider)"></div>
+        </ion-slide>
+      </ion-slide-box>
+
+      <div class="img_block" ng-repeat="item in eventTileList" ng-click="goDetail(item)">
+        <img image-lazy-src="{{item.imageThumbURL}}" image-lazy-loader="lines">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

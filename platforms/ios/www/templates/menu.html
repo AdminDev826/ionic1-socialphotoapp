@@ -1,0 +1,64 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content edge-drag-threshold="false" drag-content="false">
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" stop-event="click">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-title>
+        <img src="img/Logo1.png" class="logo1"/>
+      </ion-nav-title>
+      <!--<ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-search-strong" ng-click="goSearch()">
+        </button>
+      </ion-nav-buttons>-->
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+    <ion-content scroll="false" class="menu_content">
+
+
+      <div class="item user_profile" menu-close ng-click="goProfile()">
+        <img src="{{currentUser.photo}}"  ng-if="!loginAsGuest"/><br>
+        <div class="name"  ng-if="!loginAsGuest">{{currentUser.name}}</div>
+      </div>
+      <ion-list>
+        <ion-item menu-close href="#/app/home" class="item-icon-left">
+          <i class="icon ion-ios-home-outline"></i>
+          HOME
+        </ion-item>
+
+        <ion-item menu-close href="#/app/upcomming" class="item-icon-left">
+          <i class="icon ion-ios-calendar-outline"></i>
+          UPCOMING
+        </ion-item>
+        <ion-item menu-close href="#/app/photos" class="item-icon-left">
+          <i class="icon ion-ios-camera-outline"></i>
+          PHOTOS
+        </ion-item>
+        <ion-item menu-close href="#/app/browse" class="item-icon-left">
+          <i class="icon ion-ios-settings"></i>
+          BROWSE
+        </ion-item>
+        <ion-item menu-close href="#/app/notifications" class="item-icon-left">
+          <i class="icon ion-clipboard"></i>
+          NOTIFICATIONS
+        </ion-item>
+        <ion-item menu-close href="#/app/settings" class="item-icon-left" ng-if="!loginAsGuest">
+          <i class="icon ion-ios-gear-outline"></i>
+          SETTINGS
+        </ion-item>
+        <ion-item menu-close href="#" ng-click="logout()" class="item-icon-left">
+          <i class="icon ion-log-out"></i>
+          LOGOUT
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

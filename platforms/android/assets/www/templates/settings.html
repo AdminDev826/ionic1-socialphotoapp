@@ -1,0 +1,77 @@
+<ion-view view-title="<img src='img/Logo1.png' class='logo1'/>">
+  <ion-nav-bar class="bar-balanced">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-clear" ng-click="onSave()">Save
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="setting_content">
+    <div class="profile_img_area">
+      <img ng-src="{{currentUser.profileImage}}" class="profile_img"/>
+
+    </div>
+
+    <div class="list">
+
+      <div class="item item-divider item-icon-right">
+        EDIT PROFILE
+        <i class="icon ion-ios-arrow-right"></i>
+      </div>
+
+      <label class="item item-input">
+        <span class="input-label">FIRST NAME</span>
+        <input type="text" ng-model="currentUser.firstName">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">SECOND NAME</span>
+        <input type="text" ng-model="currentUser.lastName">
+      </label>
+      <!--
+      <label class="item item-input">
+        <span class="input-label">EMAIL ADDRESS</span>
+        <input type="email" ng-model="currentUser.email">
+      </label>
+-->
+      <a class="item item-divider item-icon-right" href="#/app/change_password">
+        CHANGE PASSWORD
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+
+      <li class="item item-toggle">
+         PUSH NOTIFICATIONS
+         <label class="toggle toggle-balanced">
+           <input type="checkbox"  ng-model="currentUser.pushNotification" ng-change="changePush()">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+
+      <a class="item item-divider item-icon-right" href="#/app/about">
+        ABOUT WUGI
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+
+      <div class="item item-divider item-icon-right" ng-click="onContact()">
+        CONTACT WUGI
+        <i class="icon ion-ios-arrow-right"></i>
+      </div>
+
+      <a class="item item-divider item-icon-right" href="#/app/privacy">
+        PRIVACY POLICY
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+
+      <a class="item item-divider item-icon-right" href="#/app/terms">
+        TERMS AND CONDITIONS
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,9 @@
+<ion-view view-title="<img src='img/Logo1.png' class='logo1'/>">
+
+  <ion-content class="photos_content ">
+    <div class="padding text-center lightfont" style="color:#666; font-size:2em; line-height:40px;">Recent Photos</div>
+    <div class="img_block" ng-repeat="item in eventTileList">
+      <img image-lazy-src="{{item.cover}}" image-lazy-loader="lines" ng-click="goPhotoGallery(item)">
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-modal-view>
+  <div class="bar bar-header bar-dark photo-detail-header">
+    <button class="button button-clear button-icon ion-android-close" ng-click="closePhotoDetail()"></button>
+    <h1 class="title">{{selectedPhoto.title}}</h1>
+    <button class="button button-clear button-icon ion-share" ng-click="shareImg()"></button>
+  </div>
+  <ion-content class="photo_detail_content has-header" scroll="false">
+
+    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+      <ion-slide ng-repeat="item in photoTileList">
+        <div class="box blue"><img src="{{item.filename}}" class="full-image"/></div>
+      </ion-slide>
+    </ion-slide-box>
+    <h2>{{selectedPhoto.title}}</h2>
+    <h4>{{selectedPhoto.eventDate}}</h4>
+    <img class="logo" src="img/Logo.png" />
+  </ion-content>
+</ion-modal-view>

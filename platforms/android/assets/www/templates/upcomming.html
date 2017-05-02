@@ -1,0 +1,18 @@
+<ion-view>
+  <div class="subheader_area">
+    <div class="row calender_row">
+      <div class="col-14" ng-repeat="dayOfWeek in calendar_list">{{dayOfWeek.dayOfWeek}}</div>
+    </div>
+    <div class="row calender_date_row">
+      <div class="col-14" ng-repeat="day in calendar_list">
+        <span class="active" ng-if="activeDate.timestamp == day.timestamp">{{day.dayNum}}</span>
+        <span ng-if="activeDate.timestamp !== day.timestamp" ng-click="changeDate(day)">{{day.dayNum}}</span>
+      </div>
+    </div>
+  </div>
+  <ion-content class="upcomming_content has-custom-header" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()" style="padding-top:30px;">
+    <div class="img_block" ng-repeat="item in eventTileList" ng-if="(item.timestamp > activeDate.timestamp) && (item.timestamp < activeNextDate.timestamp)" ng-click="goDetail(item)">
+      <img src="{{item.imageThumbURL}}" >
+    </div>
+  </ion-content>
+</ion-view>

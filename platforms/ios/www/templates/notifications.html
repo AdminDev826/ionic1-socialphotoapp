@@ -1,0 +1,36 @@
+<ion-view view-title="<img src='img/Logo1.png' class='logo1'/>">
+
+  <ion-content class="notification_content">
+    <ul class="list">
+      <span ng-repeat="item in notificationList">
+        <li class="item item-icon-right" ng-if="item.isWhat=='gallery'" ng-click="goGallery(item)">
+          <h2>{{item.title}}</h2>
+          <p>{{item.description}}</p>
+          <img src="{{isrc}}" ng-repeat="isrc in item.images track by $index"/>
+          <span class="item-note">
+            {{item.date}}
+          </span>
+          <i class="icon  ion-ios-arrow-right" style="font-size:1em; color:#999"></i>
+        </li>
+        <li class="item item-icon-right" ng-if="item.isWhat=='event'" ng-click="goEvent(item)">
+          <h2>{{item.title}}</h2>
+          <p>{{item.description}}</p>
+          <img src="{{isrc}}" ng-repeat="isrc in item.images track by $index"/>
+          <span class="item-note">
+            {{item.date}}
+          </span>
+          <i class="icon  ion-ios-arrow-right" style="font-size:1em; color:#999"></i>
+        </li>
+        <li class="item item-icon-right" ng-if="item.isWhat=='nothing'">
+          <h2>{{item.title}}</h2>
+          <p>{{item.description}}</p>
+          <img src="{{isrc}}" ng-repeat="isrc in item.images track by $index"/>
+          <span class="item-note">
+            {{item.date}}
+          </span>
+          <i class="icon  ion-ios-arrow-right" style="font-size:1em; color:#999"></i>
+        </li>
+      </span>
+    </ul>
+  </ion-content>
+</ion-view>

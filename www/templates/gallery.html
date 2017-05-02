@@ -1,0 +1,10 @@
+<ion-view view-title="<img src='img/Logo1.png' class='logo1'/>">
+
+  <ion-content class="photos_content ">
+    <div class="padding text-center lightfont" style="color:#666; font-size:2em; line-height:40px; font-weight:bold;">{{selectedGallery.title}}</div>
+    <div class="text-center lightfont" style="color:#666; width:100%; padding-bottom:10px; font-size:1.4em;" >{{selectedGallery.eventDate}}</div>
+    <div class="img_block" ng-repeat="item in photoTileList">
+      <img src="{{item.filename}}" ng-click="showPhotoDetail($index)">
+    </div>
+  </ion-content>
+</ion-view>

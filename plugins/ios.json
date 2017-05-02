@@ -1,0 +1,80 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "695224723968520",
+            "APP_NAME": "Wugi",
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "org.apache.cordova.core.ParsePlugin": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-queries-schemes": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        },
+        "cordova-plugin-actionsheet": {
+            "PACKAGE_NAME": "com.wugi.wugi"
+        }
+    }
+}

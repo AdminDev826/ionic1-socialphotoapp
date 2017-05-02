@@ -1,0 +1,19 @@
+<ion-view view-title="<img src='img/Logo1.png' class='logo1'/>">
+
+  <ion-content lazy-scroll >
+    <div class="bar bar-header bar-balanced item-input-inset" style="margin-top:-20px;">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="Search" ng-model="search.txt">
+      </label>
+      <button class="button button-balanced" menu-close ng-click="onSearch()">
+        Search
+      </button>
+    </div>
+    <div class="list " style="padding-left:5px; padding-right:5px; padding-top:5px;">
+      <div class="img_block" ng-repeat="item in eventTileList" ng-click="goDetail(item)">
+        <img image-lazy-src="{{item.imageThumbURL}}" image-lazy-loader="lines">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

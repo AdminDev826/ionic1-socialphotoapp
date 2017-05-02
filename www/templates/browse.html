@@ -1,0 +1,42 @@
+<ion-view view-title="<img src='img/Logo1.png' class='logo1'/>">
+  <div class="subheader_area">
+    <div class="row tab_row">
+      <div class="col-33">
+        <button class="button button-balanced" ng-class="currentTab=='event'?'':'button-clear'" ng-click="changeTab('event')">EVENT</button>
+      </div>
+      <div class="col-34">
+        <button class="button button-balanced" ng-class="currentTab=='venue'?'':'button-clear'" ng-click="changeTab('venue')">VENUE</button>
+      </div>
+      <div class="col-33">
+        <button class="button button-balanced" ng-class="currentTab=='type'?'':'button-clear'" ng-click="changeTab('type')">TYPE</button>
+      </div>
+    </div>
+  </div>
+  <ion-content class="browse_content has-custom-header" on-swipe-right="onSwipeRight()" on-swipe-left="onSwipeLeft()">
+    <div class="list" ng-if="currentTab=='event'">
+      <div class="full-image" ng-repeat="item in browseEventList" ng-click="goEventCategory(item)">
+        <img ng-src="{{item.BrowseEventImg}}" class="full-image">
+        <h2>{{item.EventName}}</h2>
+      </div>
+    </div>
+    <div class="list" ng-if="currentTab=='venue'">
+      <div class="full-image" ng-repeat="item in browseEventList" ng-click="goVenueCategory(item)">
+        <img ng-src="{{item.BrowseEventImg}}" class="full-image">
+        <h2>{{item.EventName}}</h2>
+      </div>
+      <!--<div class="full-image" ng-repeat="item in browseVenueList" ng-click="goVenueCategory(item)">
+        <img ng-src="{{item.VenueThumImag}}" class="full-image" style="height:250px;">
+        <h2>{{item.VenueName}}</h2>
+      </div>
+      <div class="img_block" ng-repeat="item in browseVenueList" ng-click="goVenueCategory(item)">
+        <img image-lazy-src="{{item.VenueThumImag}}" image-lazy-loader="lines">
+      </div>-->
+    </div>
+    <div class="list" ng-if="currentTab=='type'">
+      <div class="full-image" ng-repeat="item in browseVenueTypeList" ng-click="goVenueTypeCategory(item)">
+        <img ng-src="{{item.VenueTypeThumImg}}" class="full-image">
+        <h2>{{item.VenueTypeName}}</h2>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view >
+  <ion-content lazy-scroll style="padding-left:5px; padding-right:5px; padding-top:5px;">
+    <div class="padding text-center lightfont" style="color:#666; font-size:2em; line-height:40px; font-weight:bold;">{{selectedData.name}} Events</div>
+    <div class="text-center lightfont" style="color:#666; width:100%; padding-bottom:10px; font-size:1.4em;" >Search Results</div>
+    <div class="list ">
+
+      <div class="img_block" ng-repeat="item in eventTileList" ng-click="goDetail(item)">
+        <img image-lazy-src="{{item.imageThumbURL}}" image-lazy-loader="lines">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

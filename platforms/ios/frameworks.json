@@ -1,0 +1,19 @@
+{
+    "ImageIO.framework": 1,
+    "CoreLocation.framework": 2,
+    "AVFoundation.framework": 1,
+    "MessageUI.framework": 2,
+    "MapKit.framework": 1,
+    "libsqlite3.dylib": 2,
+    "Social.framework": 2,
+    "Accounts.framework": 2,
+    "Security.framework": 2,
+    "AudioToolbox.framework": 3,
+    "CFNetwork.framework": 2,
+    "QuartzCore.framework": 2,
+    "StoreKit.framework": 2,
+    "SystemConfiguration.framework": 2,
+    "libz.tbd": 1,
+    "libsqlite3.tbd": 1,
+    "libz.dylib": 1
+}

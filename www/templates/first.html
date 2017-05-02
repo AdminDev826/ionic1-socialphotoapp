@@ -1,0 +1,15 @@
+<ion-view >
+  <ion-content class="home_content " scroll="false">
+    <br><br><br>
+    <img class="logo" src="img/Logo.png" />
+    <br><br><br><br><br><br><br>
+    <button class="button button-light button-outline login_btn" ng-click="showSignup()">Sign Up</button>
+    <button class="button button-light button-outline login_btn" ng-click="showSignin()">Sign In</button>
+    <button class="button button-positive login_btn fb_btn" ng-click="fbLogin()">Sign In With Facebook</button>
+
+    <div class="row padding">
+      <div class="col-50" style="text-align:left;"><button class="button button-light button-clear" ng-click="goGuest()">Continue As Guest</button></div>
+      <div class="col-50" style="text-align:right;"><button class="button button-light button-clear" ng-click="onTerms()">Terms of Use</button></div>
+    </div>
+  </ion-content>
+</ion-view>
